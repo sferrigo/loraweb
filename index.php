@@ -71,15 +71,15 @@ $sql_aplicacao = "INSERT INTO aplicacao
 	    VALUES 
 	('" . $app_id . 
 	"','" . $dev_id . 
-	"'," . $hardware_serial . 
-	", " . $port . 
+	"','" . $hardware_serial . 
+	"', " . $port . 
 	", " . $counter . 
 	", '" . $payload_raw  . "')";	
 
 if(mysqli_query($link, $sql_aplicacao)){
     error_log("Aplicacao Records added successfully.");
 } else{
-    echo "ERROR: Could not able to execute $sql_aplicacao. " . mysqli_error($link);
+    echo error_log("Aplicacao Records com erro! SQL tentado: " . $sql_aplicacao);
 }
 
 

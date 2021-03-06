@@ -20,7 +20,7 @@
 				LEFT JOIN `gateway_record` ON `metadata`.`id` = `gateway_record`.`metadata_id` 
 				LEFT JOIN gateway ON gateway.gtw_id = gateway_record.gtw_id
 				WHERE (( `datastamp` >= '2020-02-28'))
-				ORDER BY aplicacao.id DESC LIMIT 150";
+				ORDER BY aplicacao.id DESC LIMIT 300";
 
 			if(mysqli_query($con, $consulta)){
 				error_log("Aplicacao Records returned successfully.");
